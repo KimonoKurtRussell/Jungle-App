@@ -1,0 +1,27 @@
+<% quantity = info.quantity %>
+
+<% if product = info.product %>
+  <% item_total = info.product.price * quantity %>
+  <% @order_total += item_total %>
+
+  <tr>
+    <td>
+    image
+      <%= image_tag info.product.image.tiny %>
+    </td>
+    <td>
+      <h4><%= info.product.name %></h4>
+      <br>
+      <p><%= info.product.description %></p>
+    </td>
+    <td>
+      <%= info.product.price %>
+    </td>
+    <td>
+      <%= info.quantity %>
+    </td>
+    <td>
+      <%= item_total %>
+    </td>
+  </tr>
+<% end %>
