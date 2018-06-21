@@ -18,7 +18,7 @@
       </thead>
       <tbody>
         <% Category.all.each do |category| %>
-        <li><%= link_to category.name, category %></li>
+        <ul><%= link_to category.name, category %></ul>
       <% end %>
       </tbody>
     </table>
