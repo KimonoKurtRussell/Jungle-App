@@ -13,12 +13,12 @@
       <ul class="nav navbar-nav">
         <li class="sign-in">
           <% if current_user %>
-           <li><% link_to "Logout", "/logout" %></li>
+            <% link_to "Logout", "/logout" %>
            <li><a href="/logout">Logout</a></li>
             <% else %>
-            <li><% link_to "Login", "/login" %></li>
+            <% link_to "Login", "/login" %>
             <li><a href="/login">Login</a></li>
-            <li><% link_to "Signup", "/signup"%></li>
+            <% link_to "Signup", "/signup"%>
             <li><a href="/signup">Sign Up</a></li>
             <% end %>
           <li>
