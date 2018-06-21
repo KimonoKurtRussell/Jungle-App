@@ -11,7 +11,17 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
+        <li class="sign-in">
+          <% if current_user %>
+           <li><% link_to "Logout", "/logout" %></li>
+           <li><a href="/logout">Logout</a></li>
+            <% else %>
+            <li><% link_to "Login", "/login" %></li>
+            <li><a href="/login">Login</a></li>
+            <li><% link_to "Signup", "/signup"%></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <% end %>
+          <li>
           <%= link_to 'Home', :root %>
         </li>
         <li class="dropdown">
