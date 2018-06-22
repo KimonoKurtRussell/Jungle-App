@@ -1,0 +1,7 @@
+Email verification for your order from jungle.com
+===============================================
+
+You have successfully completed a transaction from jungle.com
+your order id is: <%= @order.id %>
+
+Thanks for the purchase and have a great day!
