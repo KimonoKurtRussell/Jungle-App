@@ -18,12 +18,18 @@ Rails.application.routes.draw do
     resources :categories, only:[:new, :create, :index]
   end
 
+
    get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+
+
+  resources :products do
+    resources :reviews, only: [:create, :destroy]
+  end
 
 
 
